@@ -18,17 +18,18 @@ fun main(args: Array<String>) {
     stringContains("wordle")
 }
 
-//TODO This function takes in two numbers and:
-//  if number1 is less than number2, then print a message informing the user of that.
-//  if number1 is greater than or equal to number2, print a message letting the user know that.
 var msg1 : String = "the first number is smaller than the number2!";
 var msg2 : String = "the first number is greater than or equal to number2";
 fun minimumOf(number1: Long, number2: Long) = if(number1 <= number2)println(msg1); else println(msg2);
 
 fun rangeOf(number: Int){
-    //TODO This function takes in a number and prints out the range that the number falls in.
-    // The ranges are: (0 or below) (1 to 5), (6 to 10), (11 to 20), (21+)
-    // For example, if the number was 7, print out a message saying that the number 7 falls into the range 6 to 10.
+    when(number){
+        in Int.MIN_VALUE..0 -> println("the number $number is below 0 or is 0");
+        in 1..5 -> println("the number $number is between 1 and 5");
+        in 6..10 -> println("the number $number is between 6 and 10");
+        in 11..20 -> println("the number $number is between 11 and 20");
+        in 21..Int.MAX_VALUE -> println("the number $number is 21 or greater");
+    }
 }
 
 fun inferredTypeOf(variable: Any){
