@@ -33,10 +33,16 @@ fun rangeOf(number: Int){
 }
 
 fun inferredTypeOf(variable: Any){
-    //TODO This function examines the inferred type of the variable passed as a parameter.
-    // When the type is Int, print out that the data type of the variable is Int.
-    //    Adopt the same approach for the following types: Long, Double, Float or Boolean.
-    // When the data type is not Int, Long, Double, Float or Boolean, print that the data type is something else.
+    when(variable){
+        is Int -> println("The inferred type of the variable is Int");
+        is Long -> println("The inferred type of the variable is Long");
+        is Double -> println("The inferred type of the variable is Double");
+        is Float -> println("The inferred type of the variable is Float");
+        is Boolean -> println("The inferred type of the variable is Boolean");
+        else -> {
+            println("The inferred data type is something else");
+        }
+    }
 }
 
 fun stringContains(str : String){
