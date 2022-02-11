@@ -12,17 +12,18 @@
 // Hint: the week 2 syntax labs are a good support for completing this project
 
 fun main(args: Array<String>) {
-    minimumOf(5,7)
+    minimumOf(9,7)
     rangeOf(4)
     inferredTypeOf(0.0F)
     stringContains("wordle")
 }
 
-fun minimumOf(number1: Long, number2: Long){
-    //TODO This function takes in two numbers and:
-    //  if number1 is less than number2, then print a message informing the user of that.
-    //  if number1 is greater than or equal to number2, print a message letting the user know that.
-}
+//TODO This function takes in two numbers and:
+//  if number1 is less than number2, then print a message informing the user of that.
+//  if number1 is greater than or equal to number2, print a message letting the user know that.
+var msg1 : String = "the first number is smaller than the number2!";
+var msg2 : String = "the first number is greater than or equal to number2";
+fun minimumOf(number1: Long, number2: Long) = if(number1 <= number2)println(msg1); else println(msg2);
 
 fun rangeOf(number: Int){
     //TODO This function takes in a number and prints out the range that the number falls in.
